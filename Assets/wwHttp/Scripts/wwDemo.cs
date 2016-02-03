@@ -7,7 +7,7 @@ public class wwDemo : MonoBehaviour {
 
     void Start()
     {
-        test1Client = wwHttpManager.CreateHttpRequest("http://test.dshinepf.com:9070/m/r1/test.jsp?test=111&111=333", "333", TestCallback);
+        test1Client = wwHttpManager.CreateHttpRequest("http://www.baidu.com", "333", TestCallback);
     }
 
     private void TestCallback(wwHttpInfo info)
@@ -33,7 +33,7 @@ public class wwDemo : MonoBehaviour {
         if (GUI.Button(new Rect(0, 60, 100, 50), "添加到请求队列"))
         {
             wwHttpClient client =
-                wwHttpManager.CreateHttpRequest("http://test.dshinepf.com:9070/m/r1/test.jsp?test=111&111=333",TestCallback);
+                wwHttpManager.CreateHttpRequest("http://www.baidu.com", TestCallback);
             wwHttpQueue.AddToQueue(client);
         }
     }
